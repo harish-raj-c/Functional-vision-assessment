@@ -243,10 +243,4 @@ cd frontend
 npm run check
 ```
 
-## License
 
-Proprietary - Companion Robot Vision Assessment System
-
-## Support
-
-For issues or questions, contact the development team.
