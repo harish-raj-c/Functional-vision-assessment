@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/20 dark:border-gray-700/20;
+  }
+  
+  .healthcare-button {
+    @apply px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 
+           transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 
+           focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .healthcare-button-primary {
+    @apply healthcare-button bg-gradient-to-r from-primary-500 to-primary-600 
+           text-white shadow-lg hover:shadow-xl focus:ring-primary-300;
+  }
+  
+  .healthcare-button-secondary {
+    @apply healthcare-button bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 
+           border-2 border-gray-200 dark:border-gray-600 hover:border-primary-300 
+           focus:ring-primary-300;
+  }
+  
+  .number-button {
+    @apply w-20 h-20 rounded text-3xl font-bold transition-all duration-200 
+           transform hover:scale-110 active:scale-95 focus:outline-none 
+           focus:ring-4 focus:ring-primary-300;
+  }
+  
+  .status-indicator {
+    @apply flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+  }
+  
+  .status-success {
+    @apply status-indicator bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400;
+  }
+  
+  .status-warning {
+    @apply status-indicator bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400;
+  }
+  
+  .status-error {
+    @apply status-indicator bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+  }
+  
+  .status-pending {
+    @apply status-indicator bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .high-contrast {
+    @apply contrast-125;
+  }
+  
+  .large-text {
+    @apply text-xl;
+  }
+  
+  .extra-large-text {
+    @apply text-2xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
